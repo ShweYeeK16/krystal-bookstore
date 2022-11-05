@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="loginView(content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/app.css"
+          th:href="@{/css/app.css}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+    <div th:replace="~{fragments/main.html :: main(${content})}"></div>
+</body>
+</html>

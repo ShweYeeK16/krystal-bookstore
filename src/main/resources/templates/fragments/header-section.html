@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<body th:fragment="headSection">
+
+<section id="headerSection" class="d-flex justify-content-center align-items-center">
+    <div class="container text-white text-center">
+        <h3 class="display-5 mb-5">CLASSIC BOOKSTORE</h3>
+        <h1 class="display-4">...Welcome to Krystal's BookStore...</h1>
+        <p class="lead d-none d-md-block">
+            Let's travel across the world from Krystal's BookStore... Explore Krystal's World and get Amazing Experience!! We have Different Variety of Books.
+            Which world do you wanna travel? Choose What You Dream Of...
+        </p>
+
+        <a href="#" th:href="@{/user/all-books}" class="btn btn-lg btn-success px-5">SHOP NOW
+        </a>
+    </div>
+</section>
+
+<section>
+    <div class="container text-center mt-2 p-3">
+        <h3>WE HAVE SPECIAL BEST-SELLER AND POPULAR CHOICE BOOKS</h3>
+        <div class="row m-2">
+            <div class="col-md-6 p-3">
+                <div class="card">
+                    <img src="https://0701.static.prezi.com/preview/v2/pw5smsheqdumafysdnwbhaw2mp6jc3sachvcdoaizecfr3dnitcq_3_0.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title text-success">NOVEL</h2>
+                        <P class="card-text">
+                            From Anthony Doerr, the highly acclaimed, multiple award-winning author of Cloud Cuckoo Land, the beautiful,
+                            stunningly ambitious instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France
+                            as both try to survive the devastation of World War II.
+                        </P>
+                        <a href="#" th:href="@{/user/all-books}" class="btn btn-lg btn-outline-success">GET DETAILS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 p-3">
+                <div class="card">
+                    <img src="https://www.highereducationdigest.com/wp-content/uploads/2019/02/IMG_20190209_105045_800x480.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title text-success">SELF-HEALING</h2>
+                        <P class="card-text">
+                            A book for finding purpose and strength in times of great despair, the international best-seller is still just as relevant today as when it was first published.
+                        <br>
+                            “This is a book I reread a lot . . . it gives me hope . . . it gives me a sense of strength.”
+                        </P>
+                        <a href="#" th:href="@{/user/all-books}" class="btn btn-lg btn-outline-success">GET DETAILS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

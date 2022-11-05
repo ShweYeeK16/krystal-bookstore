@@ -1,0 +1,5 @@
+insert into books(id,author,book_name,price,img_url,category)values (2,'Shwe U Daung','USanShar',4000,'https://picsum.photos/300/400/?image=56','Detective');
+insert into books(id,author,book_name,price,img_url,category)values (3,'Dagon Tarya','May',4000,'https://picsum.photos/300/400/?image=57','Romance');
+insert into books(id,author,book_name,price,img_url,category)values (1,'Juu','River',4000,'https://shadycharacters.co.uk/wp/wp-content/uploads/2016/12/Book_IMG_1754-1-e1481474081467.jpg','Romance');
+insert into books(id,author,book_name,price,img_url,category)values (4,'Mya Than Tint','Beyond Love',4000,'https://picsum.photos/300/400/?image=58','Romance');
+insert into books(id,author,book_name,price,img_url,category)values (5,'Thaw Thar Swe','His Knife and Blood',5000,'https://picsum.photos/300/400/?image=59','Romance');

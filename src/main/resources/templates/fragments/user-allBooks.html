@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <section th:fragment="userAllBooks">
+        <div class="row mr-5">
+            <div class="col-md-3" th:each="book : ${books}">
+                <div class="card text-center">
+                    <img th:src="${book.imgUrl}"
+                         class="card-img-top">
+
+                    <div class="card-body">
+                        <a href="#" th:href="@{'/user/book-details?bookId='+${book.id}}" class="btn btn-outline-info mr-2">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

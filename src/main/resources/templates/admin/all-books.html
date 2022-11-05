@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layout/adminViewLayout :: main(~{::main})}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="container">
+    <h3 class="text-center my-3">Books List</h3>
+
+    <table th:replace="fragments/all-books.html :: allBooks"></table>
+
+    <a href="#" th:href="@{/admin/create-book}" class="btn btn-primary">Create Book</a>
+  </div>
+</main>
+</body>
+</html>

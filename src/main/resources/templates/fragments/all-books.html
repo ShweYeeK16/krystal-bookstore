@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <table th:fragment="allBooks" class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="book : ${books}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.author}"></td>
+            <td th:text="${book.price}"></td>
+            <td th:text="${book.category.name}"></td>
+            <td> <a href="#" class="btn btn-outline-danger"
+                    th:href="@{'/admin/all-books/delete/'+ ${book.id}}">Delete</a> </td>
+            <td> <a href="#" class="btn btn-outline-info"
+                    th:href="@{'/admin/all-books/update?bookId='+ ${book.id}}">Update</a> </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

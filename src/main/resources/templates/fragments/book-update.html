@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<form th:fragment="bookUpdate" action="#" th:action="@{/admin/all-books/process}" th:object="${book}" method="post">
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" th:field="*{title}" class="form-control"
+               th:classappend="${#fields.hasErrors('title')} ? 'is-invalid'">
+        <small class="invalid-feedback" th:errors="*{title}"></small>
+    </div>
+
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" th:field="*{author}" class="form-control"
+               th:classappend="${#fields.hasErrors('author')} ? 'is-invalid'">
+        <small class="invalid-feedback" th:errors="*{author}"></small>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select name="catId" id="category" class="form-control">
+            <option th:each="cat : ${categories}" th:text="${cat.name}" th:value="${cat.id}"></option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" id="price" th:field="*{price}" class="form-control"
+               th:classappend="${#fields.hasErrors('price')} ? 'is-invalid'">
+        <small class="invalid-feedback" th:errors="*{price}"></small>
+    </div>
+
+    <div class="form-group">
+        <label for="imgUrl">ImageUrl</label>
+        <input type="url" id="imgUrl" th:field="*{imgUrl}" class="form-control"
+               th:classappend="${#fields.hasErrors('imgUrl')} ? 'is-invalid'">
+        <small class="invalid-feedback" th:errors="*{imgUrl}"></small>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-primary">
+
+</form>
+
+</body>
+</html>

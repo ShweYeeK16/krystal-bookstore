@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layout/adminViewLayout :: main(~{::main})}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div class="container">
+        <h3 class="text-center">Book Update</h3>
+
+        <form th:replace="fragments/book-update.html :: bookUpdate"></form>
+    </div>
+</main>
+</body>
+</html>
